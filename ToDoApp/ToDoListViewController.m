@@ -7,7 +7,6 @@
 //
 
 #import "ToDoListViewController.h"
-#import "ToDoListEditViewController.h"
 #import "ToDoListViewCell.h"
 
 @interface ToDoListViewController ()
@@ -158,11 +157,15 @@
     
     if([self.Edit.titleLabel.text isEqualToString:@"Edit"])
     {
+        [super setEditing:YES animated:YES];
+        [self.tableView setEditing:YES animated:YES];
         self.Edit.titleLabel.text = @"Done";
         self.isToUpdateDataArray = NO;
         [self.Edit setTitle:@"Done" forState:UIControlStateNormal];
         self.Add.enabled = NO;
     } else {
+        [super setEditing:NO animated:NO];
+        [self.tableView setEditing:NO animated:NO];
         self.Edit.titleLabel.text = @"Edit";
         [self.Edit setTitle:@"Edit" forState:UIControlStateNormal];
         self.Add.enabled = YES;
@@ -187,4 +190,31 @@
     self.isToUpdateDataArray = NO;
     [self.tableView reloadData];
 }
+
+- (void)tableView: (UITableView *)tableView commitEditingStyle: (UITableViewCellEditingStyle)editingStyle forRowAtIndexPath: (NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        // Delete the row from the data source
+        
+        [self.dataArray removeObjectAtIndex:[indexPath row]];
+        
+        // Delete row using the cool literal version of [NSArray arrayWithObject:indexPath]
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+    }
+    
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+    NSString *item = [self.dataArray objectAtIndex:fromIndexPath.row];
+    [self.dataArray removeObject:item];
+    [self.dataArray insertObject:item atIndex:toIndexPath.row];
+}
+
 @end

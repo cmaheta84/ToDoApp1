@@ -8,7 +8,6 @@
 
 #import "ToDoListViewCell.h"
 @interface ToDoListViewCell ()
-- (IBAction)onClickDelete:(id)sender;
 
 @end
 
@@ -29,9 +28,6 @@ id callbackobject = nil;
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.Delete.hidden = YES;
-        self.Delete.backgroundColor = UIColor.redColor;
-        self.hiddenDelete = YES;
         // Initialization code
     }
     return self;
@@ -40,15 +36,8 @@ id callbackobject = nil;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-    self.Delete.hidden = self.hiddenDelete;
     
     // Configure the view for the selected state
 }
 
-
-- (IBAction)onClickDelete:(id)sender {
-    if(callback != nil) {
-        [callbackobject performSelector:callback withObject:self];
-    }
-}
 @end

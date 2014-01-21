@@ -11,7 +11,6 @@
 
 @interface ToDoListViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UITextField *ToDoItem;
-@property (weak, nonatomic) IBOutlet UIButton *Delete;
 @property (assign, nonatomic) Boolean hiddenDelete;
 @property (assign, nonatomic) NSUInteger index;
 
