@@ -22,7 +22,6 @@
 		287C64E3188C44C50086CBA4 /* ToDoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 287C64E2188C44C50086CBA4 /* ToDoAppTests.m */; };
 		287C64EE188C44EC0086CBA4 /* ToDoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287C64ED188C44EC0086CBA4 /* ToDoListViewController.m */; };
 		287C64F1188C50C80086CBA4 /* ToDoListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 287C64F0188C50C80086CBA4 /* ToDoListViewCell.m */; };
-		287C64F4188C5BCE0086CBA4 /* ToDoListEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287C64F3188C5BCE0086CBA4 /* ToDoListEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +56,6 @@
 		287C64ED188C44EC0086CBA4 /* ToDoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListViewController.m; sourceTree = "<group>"; };
 		287C64EF188C50C80086CBA4 /* ToDoListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListViewCell.h; sourceTree = "<group>"; };
 		287C64F0188C50C80086CBA4 /* ToDoListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListViewCell.m; sourceTree = "<group>"; };
-		287C64F2188C5BCE0086CBA4 /* ToDoListEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListEditViewController.h; sourceTree = "<group>"; };
-		287C64F3188C5BCE0086CBA4 /* ToDoListEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +124,6 @@
 				287C64ED188C44EC0086CBA4 /* ToDoListViewController.m */,
 				287C64EF188C50C80086CBA4 /* ToDoListViewCell.h */,
 				287C64F0188C50C80086CBA4 /* ToDoListViewCell.m */,
-				287C64F2188C5BCE0086CBA4 /* ToDoListEditViewController.h */,
-				287C64F3188C5BCE0086CBA4 /* ToDoListEditViewController.m */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
@@ -261,7 +256,6 @@
 			files = (
 				287C64EE188C44EC0086CBA4 /* ToDoListViewController.m in Sources */,
 				287C64C8188C44C50086CBA4 /* AppDelegate.m in Sources */,
-				287C64F4188C5BCE0086CBA4 /* ToDoListEditViewController.m in Sources */,
 				287C64F1188C50C80086CBA4 /* ToDoListViewCell.m in Sources */,
 				287C64C4188C44C50086CBA4 /* main.m in Sources */,
 			);
